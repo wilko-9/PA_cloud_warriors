@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wilko\\Documents\\school\\project_alpha\\project_alpha.csproj",
-      "projectName": "project_alpha",
-      "projectPath": "C:\\Users\\wilko\\Documents\\school\\project_alpha\\project_alpha.csproj",
+      "projectUniqueName": "C:\\Users\\wilko\\Documents\\school\\project_alpha\\alpha\\alpha.csproj",
+      "projectName": "alpha",
+      "projectPath": "C:\\Users\\wilko\\Documents\\school\\project_alpha\\alpha\\alpha.csproj",
       "packagesPath": "C:\\Users\\wilko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wilko\\Documents\\school\\project_alpha\\obj\\",
+      "outputPath": "C:\\Users\\wilko\\Documents\\school\\project_alpha\\alpha\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wilko\\AppData\\Roaming\\NuGet\\NuGet.Config"

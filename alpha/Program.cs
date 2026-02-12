@@ -1,4 +1,4 @@
-﻿namespace project_alpha;
+﻿namespace alpha;
 
 class Program
 {
