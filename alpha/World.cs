@@ -1,3 +1,5 @@
+namespace alpha;
+
 public static class World
 {
 
