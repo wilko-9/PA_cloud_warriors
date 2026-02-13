@@ -1,0 +1,5 @@
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.AssemblyInfoInputs.cache
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.AssemblyInfo.cs
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.csproj.CoreCompileInputs.cache
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.sourcelink.json
