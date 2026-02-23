@@ -8,32 +8,25 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\wilko\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\fedde\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
+      "projectUniqueName": "C:\\Users\\fedde\\Desktop\\pa_cloud_warriors\\PA_cloud_warriors\\alpha\\alpha.csproj",
       "projectName": "alpha",
-      "projectPath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
-      "packagesPath": "C:\\Users\\wilko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\obj\\",
+      "projectPath": "C:\\Users\\fedde\\Desktop\\pa_cloud_warriors\\PA_cloud_warriors\\alpha\\alpha.csproj",
+      "packagesPath": "C:\\Users\\fedde\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fedde\\Desktop\\pa_cloud_warriors\\PA_cloud_warriors\\alpha\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\wilko\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\fedde\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
