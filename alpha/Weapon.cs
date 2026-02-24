@@ -6,12 +6,10 @@ class Weapon
     public string Name;
     public int MaximumDamage;
 
-    public Weapon(int IDValue, string NameValue, int MaximumDamageValue)
+    public Weapon(int idValue, string nameValue, int maximumDamageValue)
     {
-        ID = IDValue;
-        Name = NameValue;
-        MaximumDamage = MaximumDamageValue;
-        CurrentHitPoints = CurrentHitPointsValue;
-        MaximumHitPoints = MaximumHitPointsValue;
+        ID = idValue;
+        Name = nameValue;
+        MaximumDamage = maximumDamageValue;
     }
 }

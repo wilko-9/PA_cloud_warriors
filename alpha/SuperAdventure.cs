@@ -5,9 +5,9 @@ class SuperAdventure
     public Monster CurrentMonster;
     public Player ThePlayer;
 
-    public SuperAdventure(Monster CurrentMonsterValue, Player ThePlayerValue)
+    public SuperAdventure(Monster currentMonster, Player thePlayer)
     {
-        CurrentMonster = CurrentMonsterValue;
-        ThePlayer = ThePlayerValue;
+        CurrentMonster = currentMonster;
+        ThePlayer = thePlayer;
     }
 }

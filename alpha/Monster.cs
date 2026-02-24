@@ -8,12 +8,12 @@ class Monster
     public int CurrentHitPoints;
     public int MaximumHitPoints;
 
-    public Monster(int IDValue, string NameValue, int MaximumDamageValue, int CurrentHitPointsValue, int MaximumHitPointsValue)
+    public Monster(int id, string name, int damageValue, int currentHitPoints, int maximumHitPoints)
     {
-        ID = IDValue;
-        Name = NameValue;
-        MaximumDamage = MaximumDamageValue;
-        CurrentHitPoints = CurrentHitPointsValue;
-        MaximumHitPoints = MaximumHitPointsValue;
+        ID = id;
+        Name = name;
+        MaximumDamage = damageValue;
+        CurrentHitPoints = currentHitPoints;
+        MaximumHitPoints = maximumHitPoints;
     }
 }
