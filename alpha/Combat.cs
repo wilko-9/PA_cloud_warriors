@@ -60,7 +60,7 @@ public class Combat
 
     public bool CombatMiniGamePlayerHasWon()
     {
-        while (PlayerCombat.CurrentHitPoints > 0 && MonsterCombat.CurrentHitPoints > 0)
+        while (PlayerCombat.CurrentHitPoints > 0 || MonsterCombat.CurrentHitPoints > 0)
         {
             AskPlayer();
             if (MonsterCombat.CurrentHitPoints < 0)
