@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fedde\\OneDrive - Hogeschool Rotterdam\\OODP\\Project Alpha\\PA_cloud_warriors\\alpha\\alpha.csproj": {}
+    "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fedde\\OneDrive - Hogeschool Rotterdam\\OODP\\Project Alpha\\PA_cloud_warriors\\alpha\\alpha.csproj": {
+    "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fedde\\OneDrive - Hogeschool Rotterdam\\OODP\\Project Alpha\\PA_cloud_warriors\\alpha\\alpha.csproj",
+        "projectUniqueName": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
         "projectName": "alpha",
-        "projectPath": "C:\\Users\\fedde\\OneDrive - Hogeschool Rotterdam\\OODP\\Project Alpha\\PA_cloud_warriors\\alpha\\alpha.csproj",
-        "packagesPath": "C:\\Users\\fedde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fedde\\OneDrive - Hogeschool Rotterdam\\OODP\\Project Alpha\\PA_cloud_warriors\\alpha\\obj\\",
+        "projectPath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
+        "packagesPath": "C:\\Users\\wilko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fedde\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\wilko\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
