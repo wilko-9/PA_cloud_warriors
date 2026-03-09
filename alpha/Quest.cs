@@ -1,3 +1,8 @@
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Reflection.Emit;
+
 namespace alpha;
 
 public class Quest
@@ -13,14 +18,13 @@ public class Quest
         Name = NameValue;
     }
 
-    public void QuestCompleted(Inventory inventory, int currentWeaponID, string typeReward)
-    {
-        // Display quest completion message and reward
+    public void QuestCompleted(Weapon weapon, string typeReward) {
         Console.WriteLine("Congratulations! You have completed the quest: " + Name);
-        if (typeReward == "WeaponUpgrade")
-        {
-            Console.WriteLine("You have been rewarded a weapon upgrade: " + World.WeaponByID(currentWeaponID).Name);
-            inventory.UpgradeWeapon(currentWeaponID);
+        if (typeReward == "WeaponUpgrade") {
+            string currentState = Weapon.UpgradeLevels[weapon.WeaponLevel];
+            weapon.UpgradeWeaponLevel();
+            string nextState = Weapon.UpgradeLevels[weapon.WeaponLevel];
+            Console.WriteLine("Your " + currentState + " " + weapon.Name + " is upgraded to a " + nextState + " " + weapon.Name);
         }
     }
 }
