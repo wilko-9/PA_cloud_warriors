@@ -6,7 +6,7 @@ public class start_quest
     {
         if (currentLocation.QuestAvailableHere != null)
         {
-            Quest localQuest = currentLocation.QuesstAvailableHere;
+            Quest localQuest = currentLocation.QuestAvailableHere;
 
             Console.WriteLine($"A quest is available: {localQuest.Name}");
             Console.WriteLine("Do you want to accept this quest? (Type 'accept' or 'decline')");
