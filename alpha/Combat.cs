@@ -14,38 +14,37 @@ public class Combat
 
     private void AskPlayer()
     {
-        while (true)
+        Console.WriteLine("options: \n 1: attack");
+        string? option = Console.ReadLine();
+        if (option is not null)
         {
-            Console.WriteLine("options: \n 1: attack");
-            string? option = Console.ReadLine();
-            if (option is not null)
+            if (int.TryParse(option, out int result))
             {
-                if (int.TryParse(option, out int result))
+                if (result > 0)
                 {
-                    if (result > 0)
+                    switch (result)
                     {
-                        switch (result)
-                        {
-                            case 1:
-                                PlayerAttack();
-                                break;
-                            default:
-                                Console.WriteLine("please try again");
-                                AskPlayer();
-                                break;
-                        }
-                    }
-                    if (result < 0)
-                    {
-                        continue;
+                        case 1:
+                            PlayerAttack();
+                            Console.WriteLine($"player {PlayerCombat.CurrentHitPoints}, monster {MonsterCombat.CurrentHitPoints}");
+                            break;
+                        default:
+                            Console.WriteLine("please try again");
+                            AskPlayer();
+                            break;
                     }
                 }
-            }
-            else
-            {
-                Console.WriteLine("please choose a number");
+                if (result < 0)
+                {
+                    //
+                }
             }
         }
+        else
+        {
+            Console.WriteLine("please choose a number");
+        }
+
     }
 
     private void PlayerAttack()
@@ -60,8 +59,10 @@ public class Combat
 
     public bool CombatMiniGamePlayerHasWon()
     {
-        while (PlayerCombat.CurrentHitPoints > 0 || MonsterCombat.CurrentHitPoints > 0)
+        while (PlayerCombat.CurrentHitPoints > 0 && MonsterCombat.CurrentHitPoints > 0)
         {
+            Console.Clear();
+            Console.WriteLine($"player {PlayerCombat.CurrentHitPoints}, monster {MonsterCombat.CurrentHitPoints}");
             AskPlayer();
             if (MonsterCombat.CurrentHitPoints < 0)
             {
