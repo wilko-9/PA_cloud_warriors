@@ -1,9 +1,9 @@
 namespace alpha;
 
-public class Weapon
+class Weapon
 {
-     public int ID;
-     public string Name;
+    // public int ID;
+    // public string Name;
     public int MaximumDamage;
 
     public int WeaponLevel = 1;
