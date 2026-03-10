@@ -1,6 +1,6 @@
 namespace alpha;
 
-class Weapon
+class Weapon:Item
 {
     // public int ID;
     // public string Name;

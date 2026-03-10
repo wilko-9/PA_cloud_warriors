@@ -3,3 +3,13 @@ C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.
 C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.AssemblyInfo.cs
 C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.csproj.CoreCompileInputs.cache
 C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.sourcelink.json
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\bin\Debug\net10.0\alpha.exe
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\bin\Debug\net10.0\alpha.deps.json
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\bin\Debug\net10.0\alpha.runtimeconfig.json
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\bin\Debug\net10.0\alpha.dll
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\bin\Debug\net10.0\alpha.pdb
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.dll
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\refint\alpha.dll
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.pdb
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\alpha.genruntimeconfig.cache
+C:\Users\wilko\Documents\school\PA_cloud_warriors\alpha\obj\Debug\net10.0\ref\alpha.dll
