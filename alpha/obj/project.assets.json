@@ -8,11 +8,25 @@
     "net10.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "/Users/m.matty/.nuget/packages/": {}
+=======
     "C:\\Users\\wilko\\.nuget\\packages\\": {}
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/alpha.csproj",
+      "projectName": "alpha",
+      "projectPath": "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/alpha.csproj",
+      "packagesPath": "/Users/m.matty/.nuget/packages/",
+      "outputPath": "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/m.matty/.nuget/NuGet/NuGet.Config"
+=======
       "projectUniqueName": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
       "projectName": "alpha",
       "projectPath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
@@ -21,6 +35,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wilko\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> main
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -65,7 +80,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
+=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+>>>>>>> main
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
