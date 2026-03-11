@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/alpha.csproj": {}
+    "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\alpha.csproj": {}
   },
   "projects": {
-    "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/alpha.csproj": {
+    "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\alpha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/alpha.csproj",
+        "projectUniqueName": "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\alpha.csproj",
         "projectName": "alpha",
-        "projectPath": "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/alpha.csproj",
-        "packagesPath": "/Users/m.matty/.nuget/packages/",
-        "outputPath": "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/obj/",
+        "projectPath": "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\alpha.csproj",
+        "packagesPath": "C:\\Users\\fedde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/m.matty/.nuget/NuGet/NuGet.Config"
-=======
-    "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
-        "projectName": "alpha",
-        "projectPath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
-        "packagesPath": "C:\\Users\\wilko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\wilko\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> main
+          "C:\\Users\\fedde\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -76,11 +59,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
-=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
->>>>>>> main
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

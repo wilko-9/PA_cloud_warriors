@@ -1,6 +1,6 @@
 namespace alpha;
 
-class Weapon:Item
+public class Weapon : Item
 {
     // public int ID;
     // public string Name;
@@ -25,5 +25,6 @@ class Weapon:Item
     public void UpgradeWeaponLevel()
     {
         WeaponLevel += 1;
+        MaximumDamage += 5;
     }
 }

@@ -1,3 +1,5 @@
+namespace alpha;
+
 public class Item
 {
     public int ID { get; set; }

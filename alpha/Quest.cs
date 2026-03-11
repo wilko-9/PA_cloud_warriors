@@ -5,12 +5,59 @@ public class Quest
     public string Description;
     public int ID;
     public string Name;
+    public bool IsAccepted;
+    public bool IsCompleted;
+
+    private int MonstersRemaining = 3;
 
     public Quest(int IDValue, string DescriptionValue, string NameValue)
     {
         Description = DescriptionValue;
         ID = IDValue;
         Name = NameValue;
+    }
+    
+    public void StartQuest(Weapon weapon, Player player, Location currentLocation)
+    {
+        Monster? monster = currentLocation.MonsterLivingHere;
+        if (monster == null) return;
+
+        Console.WriteLine($"\nQuest started: {Name}");
+        Console.WriteLine($"Defeat {MonstersRemaining} {monster.Name}(s)!");
+        Console.WriteLine("Press any key to begin...");
+        Console.ReadKey();
+
+        while (MonstersRemaining > 0)
+        {
+            Monster fightMonster = new Monster(monster.ID, monster.Name, monster.MaximumDamage, monster.MaximumHitPoints, monster.MaximumHitPoints);
+            player.CurrentHitPoints = player.MaximumHitPoints;
+
+            Console.Clear();
+            Console.WriteLine($"--- {monster.Name} | {MonstersRemaining} remaining ---");
+
+            Combat combat = new Combat(player, fightMonster);
+            bool playerWon = combat.CombatMiniGamePlayerHasWon();
+
+            if (playerWon)
+            {
+                MonstersRemaining--;
+                Console.WriteLine($"\nYou defeated the {monster.Name}! ({MonstersRemaining} remaining)");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("\nYou were defeated! Try again next time...");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                player.CurrentHitPoints = player.MaximumHitPoints;
+                return;
+            }
+        }
+
+        QuestCompleted(weapon, "WeaponUpgrade");
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 
     public void QuestCompleted(Weapon weapon, string typeReward) {
@@ -21,5 +68,6 @@ public class Quest
             string nextState = Weapon.UpgradeLevels[weapon.WeaponLevel];
             Console.WriteLine("Your " + currentState + " " + weapon.Name + " is upgraded to a " + nextState + " " + weapon.Name);
         }
+        IsCompleted = true;
     }
 }

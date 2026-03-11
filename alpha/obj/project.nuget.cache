@@ -1,14 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "JU7KQrNCRCc=",
+  "dgSpecHash": "ImpfDuWVMKw=",
   "success": true,
-  "projectFilePath": "/Users/m.matty/Desktop/school project/PA_cloud_warriors/alpha/alpha.csproj",
-=======
-  "dgSpecHash": "iFBgNJOveQY=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\wilko\\Documents\\school\\PA_cloud_warriors\\alpha\\alpha.csproj",
->>>>>>> main
+  "projectFilePath": "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\alpha.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\alpha.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\fedde\\Desktop\\Nieuwe map (2)\\PA_cloud_warriors\\alpha\\alpha.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
