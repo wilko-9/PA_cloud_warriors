@@ -22,8 +22,10 @@ public class Quest
         Monster? monster = currentLocation.MonsterLivingHere;
         if (monster == null) return;
 
-        Console.WriteLine($"\nQuest started: {Name}");
+        Console.Clear();
+        Console.WriteLine($"Quest started: {Name}");
         Console.WriteLine($"Defeat {MonstersRemaining} {monster.Name}(s)!");
+        Console.WriteLine();
         Console.WriteLine("Press any key to begin...");
         Console.ReadKey();
 
@@ -35,19 +37,34 @@ public class Quest
             Console.Clear();
             Console.WriteLine($"--- {monster.Name} | {MonstersRemaining} remaining ---");
 
-            Combat combat = new Combat(player, fightMonster);
-            bool playerWon = combat.CombatMiniGamePlayerHasWon();
+            Combat combat = new Combat(player, fightMonster, canFlee: true);
+            bool? result = combat.CombatMiniGamePlayerHasWon();
 
-            if (playerWon)
+            if (result == true)
             {
                 MonstersRemaining--;
-                Console.WriteLine($"\nYou defeated the {monster.Name}! ({MonstersRemaining} remaining)");
+                Console.Clear();
+                Console.WriteLine($"You defeated the {monster.Name}!");
+                Console.WriteLine($"{MonstersRemaining} remaining");
+                Console.WriteLine();
                 Console.WriteLine("Press any key to continue...");
                 Console.ReadKey();
             }
+            else if (result == null)
+            {
+                Console.Clear();
+                Console.WriteLine("You fled from the fight!");
+                Console.WriteLine();
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                player.CurrentHitPoints = player.MaximumHitPoints;
+                return;
+            }
             else
             {
-                Console.WriteLine("\nYou were defeated! Try again next time...");
+                Console.Clear();
+                Console.WriteLine("You were defeated! Try again next time...");
+                Console.WriteLine();
                 Console.WriteLine("Press any key to continue...");
                 Console.ReadKey();
                 player.CurrentHitPoints = player.MaximumHitPoints;
@@ -55,7 +72,10 @@ public class Quest
             }
         }
 
+        Console.Clear();
+        currentLocation.MonsterLivingHere = null;
         QuestCompleted(weapon, "WeaponUpgrade");
+        Console.WriteLine();
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
     }

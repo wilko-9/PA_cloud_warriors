@@ -4,15 +4,33 @@ public class Combat
 {
     Player PlayerCombat;
     Monster MonsterCombat;
-    public Combat(Player player, Monster monster)
+    bool CanFlee;
+    bool PlayerFled;
+    public Combat(Player player, Monster monster, bool canFlee = false)
     {
         MonsterCombat = monster;
         PlayerCombat = player;
+        CanFlee = canFlee;
+        PlayerFled = false;
+    }
+
+    private void ShowCombatStatus()
+    {
+        Console.Clear();
+        Console.WriteLine("--- COMBAT ---");
+        Console.WriteLine();
+        Console.WriteLine($"  {PlayerCombat.Name,-15} {PlayerCombat.CurrentHitPoints}/{PlayerCombat.MaximumHitPoints} HP");
+        Console.WriteLine($"  {MonsterCombat.Name,-15} {MonsterCombat.CurrentHitPoints}/{MonsterCombat.MaximumHitPoints} HP");
+        Console.WriteLine();
     }
 
     private void AskPlayer()
     {
-        Console.WriteLine("options: \n 1: attack");
+        Console.WriteLine("What will you do?");
+        Console.WriteLine("  1: Attack");
+        if (CanFlee) Console.WriteLine("  2: Flee");
+        Console.WriteLine();
+        Console.Write("> ");
         string? option = Console.ReadLine();
         if (option is not null)
         {
@@ -24,10 +42,22 @@ public class Combat
                     {
                         case 1:
                             PlayerAttack();
-                            Console.WriteLine($"player {PlayerCombat.CurrentHitPoints}, monster {MonsterCombat.CurrentHitPoints}");
+                            break;
+                        case 2:
+                            if (CanFlee)
+                            {
+                                PlayerFled = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("You can't flee!");
+                                Console.ReadKey();
+                                AskPlayer();
+                            }
                             break;
                         default:
-                            Console.WriteLine("please try again");
+                            Console.WriteLine("Invalid option, try again.");
+                            Console.ReadKey();
                             AskPlayer();
                             break;
                     }
@@ -40,39 +70,45 @@ public class Combat
         }
         else
         {
-            Console.WriteLine("please choose a number");
+            Console.WriteLine("Please choose a number.");
+            Console.ReadKey();
         }
-
     }
 
     private void PlayerAttack()
     {
         MonsterCombat.CurrentHitPoints -= PlayerCombat.CurrentWeapon.MaximumDamage;
+        if (MonsterCombat.CurrentHitPoints < 0) MonsterCombat.CurrentHitPoints = 0;
     }
 
     private void MonsterAttack()
     {
         PlayerCombat.CurrentHitPoints -= MonsterCombat.MaximumDamage;
+        if (PlayerCombat.CurrentHitPoints < 0) PlayerCombat.CurrentHitPoints = 0;
     }
 
-    public bool CombatMiniGamePlayerHasWon()
+    public bool? CombatMiniGamePlayerHasWon()
     {
         while (PlayerCombat.CurrentHitPoints > 0 && MonsterCombat.CurrentHitPoints > 0)
         {
-            Console.Clear();
-            Console.WriteLine($"player {PlayerCombat.CurrentHitPoints}, monster {MonsterCombat.CurrentHitPoints}");
+            ShowCombatStatus();
             AskPlayer();
-            if (MonsterCombat.CurrentHitPoints < 0)
+            if (PlayerFled)
             {
+                return null;
+            }
+            if (MonsterCombat.CurrentHitPoints <= 0)
+            {
+                ShowCombatStatus();
                 return true;
             }
             MonsterAttack();
-            if (PlayerCombat.CurrentHitPoints < 0)
+            if (PlayerCombat.CurrentHitPoints <= 0)
             {
+                ShowCombatStatus();
                 return false;
             }
         }
-        // if something goes wrong the player loses
         return false;
     }
 

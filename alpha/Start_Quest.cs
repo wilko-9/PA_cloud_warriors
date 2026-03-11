@@ -9,6 +9,7 @@ public class start_quest
             Quest localQuest = currentLocation.QuestAvailableHere;
 
             Console.WriteLine($"A quest is available: {localQuest.Name}");
+            Console.WriteLine();
             Console.WriteLine("Do you want to accept this quest? (Type 'accept' or 'decline')");
 
             bool WrongAnswer;
@@ -19,14 +20,22 @@ public class start_quest
 
                 if (command == "accept")
                 {
+                    Console.Clear();
                     Console.WriteLine("You accepted the quest!");
                     Console.WriteLine($"Quest Details: {localQuest.Description}");
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
                     localQuest.IsAccepted = true;
                     WrongAnswer = false;
                 }
                 else if (command == "decline")
                 {
+                    Console.Clear();
                     Console.WriteLine("You declined the quest. Maybe next time.");
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
                     WrongAnswer = false;
                 }
                 else

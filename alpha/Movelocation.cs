@@ -4,22 +4,19 @@ public static class MoveLocation
 {
     public static void Move_Location_Loop(Weapon weapon, Player player)
     {
-        Console.WriteLine("Hello, World!");
         Location currentLocation = World.LocationByID(World.LOCATION_ID_HOME);
 
         while(true)
         {
             Console.Clear();
             ShowLocation(currentLocation);
-
-            Console.WriteLine();
-            Console.Write("Move (N/S/E/W) or X to exit: ");
-            Console.Clear();
-            ShowLocation(currentLocation);
             Console.WriteLine();
 
 
             start_quest.CheckForQuests(currentLocation, weapon, player);
+            Console.Clear();
+            ShowLocation(currentLocation);
+            Console.WriteLine();
             Console.Write("Move (N/S/E/W) or X to exit: ");
             string input = (Console.ReadLine() ?? "").Trim().ToUpper();
 
@@ -40,6 +37,15 @@ public static class MoveLocation
                 Console.WriteLine("Press any key..");
                 Console.ReadKey();
             }
+            else if (nextLocation.ID == World.LOCATION_ID_BRIDGE &&
+                     (!World.QuestByID(World.QUEST_ID_CLEAR_ALCHEMIST_GARDEN).IsCompleted ||
+                      !World.QuestByID(World.QUEST_ID_CLEAR_FARMERS_FIELD).IsCompleted))
+            {
+                Console.WriteLine("The guard blocks your path!");
+                Console.WriteLine("You must complete the other quests before passing.");
+                Console.WriteLine("Press any key..");
+                Console.ReadKey();
+            }
             else
             {
                 currentLocation = nextLocation;
@@ -50,25 +56,48 @@ public static class MoveLocation
 
     static void ShowLocation(Location location)
     {
-        Console.WriteLine($"Location: {location.Name}");
+        Console.WriteLine($"You are at: {location.Name}");
         Console.WriteLine(location.Description);
 
-        Console.WriteLine();
-        Console.WriteLine("Possible moves:");
+        if (location.MonsterLivingHere != null)
+            Console.WriteLine($"You see a {location.MonsterLivingHere.Name} here!");
 
-        if (location.LocationToNorth != null) Console.WriteLine("  N - North");
-        if (location.LocationToSouth != null) Console.WriteLine("  S - South");
-        if (location.LocationToEast != null) Console.WriteLine("   E - East");
-        if (location.LocationToWest != null) Console.WriteLine("   W - West");
+        if (location.QuestAvailableHere != null && !location.QuestAvailableHere.IsAccepted)
+            Console.WriteLine($"A quest is available here!");
 
-        // Mocht het spel getest worden dat je nergens heen kan dan wordt dit hier opgevangen <3
-        if (location.LocationToNorth == null &&
-            location.LocationToSouth == null &&
-            location.LocationToEast == null &&
-            location.LocationToWest == null)
+        bool hasN = location.LocationToNorth != null;
+        bool hasS = location.LocationToSouth != null;
+        bool hasE = location.LocationToEast  != null;
+        bool hasW = location.LocationToWest  != null;
+
+        if (!hasN && !hasS && !hasE && !hasW)
         {
-            Console.WriteLine(" (No exits)");
+            Console.WriteLine("\n  (No exits)");
+            return;
         }
+
+        Console.WriteLine();
+        Console.WriteLine("From here you can go:");
+        Console.WriteLine();
+
+        // kompas
+        string n = hasN ? "N" : " ";
+        string s = hasS ? "S" : " ";
+        string e = hasE ? "E" : " ";
+        string w = hasW ? "W" : " ";
+
+        Console.WriteLine($"       {n}");
+        Console.WriteLine( "       |");
+        Console.WriteLine($"   {w}---|---{e}");
+        Console.WriteLine( "       |");
+        Console.WriteLine($"       {s}");
+
+        // locatie-namen
+        Console.WriteLine();
+        if (hasN) Console.WriteLine($"  N: {location.LocationToNorth!.Name}");
+        if (hasS) Console.WriteLine($"  S: {location.LocationToSouth!.Name}");
+        if (hasE) Console.WriteLine($"  E: {location.LocationToEast!.Name}");
+        if (hasW) Console.WriteLine($"  W: {location.LocationToWest!.Name}");
     }
 
 }
